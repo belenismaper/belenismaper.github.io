@@ -28,10 +28,20 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    flex: 0;
+}
+
 body {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+
     margin: 0;
     color: var(--charcoal);
-    background: var(--ivory);
+    background: var(--forest);
     font-family: var(--body);
 }
 
@@ -41,10 +51,10 @@ body {
 ========================================= */
 
 .site-header {
-    min-height: 88px;
+    min-height: 65px;
     display: flex;
     align-items: center;
-    padding: 10px clamp(24px, 6vw, 90px);
+    padding: 5px clamp(24px, 6vw, 90px);
 
     position: sticky;
     top: 0;
@@ -57,6 +67,7 @@ body {
 .brand {
     display: inline-flex;
     align-items: center;
+    height: 100%;
     gap: 16px;
 
     color: var(--ivory);
@@ -65,8 +76,9 @@ body {
 
 .brand-icon {
     display: block;
-    width: 65px;
-    height: 65px;
+    height: 100%;
+    max-height: 56px;
+    width: auto;
     object-fit: contain;
 }
 
@@ -114,8 +126,8 @@ body {
     position: relative;
     z-index: 1;
 
-    width: min(650px, 55%);
-    padding: 75px clamp(24px, 7vw, 110px);
+    width: min(850px, 65%);
+    padding: 75px clamp(24px, 5vw, 80px);
 }
 
 .eyebrow {
@@ -149,7 +161,9 @@ h1 {
 }
 
 h1 span {
+    display: block;
     color: var(--gold);
+    white-space: nowrap;
 }
 
 .hero-message {
@@ -167,7 +181,7 @@ h1 span {
 ========================================= */
 
 .countdown-panel {
-    width: min(510px, 100%);
+    width: min(460px, 100%);
 
     padding: 22px;
 
@@ -184,6 +198,9 @@ h1 span {
     font-family: var(--heading);
     font-size: 1.15rem;
     font-weight: 600;
+
+    text-align: center;
+    width: 100%;
 }
 
 .countdown {
@@ -322,7 +339,7 @@ h1 span {
     /* Cabecera */
 
     .site-header {
-        min-height: 76px;
+        min-height: 65px;
         justify-content: center;
         padding: 8px 16px;
     }
@@ -332,12 +349,13 @@ h1 span {
     }
 
     .brand-icon {
-        width: 52px;
-        height: 52px;
+        height: 100%;
+        max-height: 56px;
+        width: auto;
     }
 
     .brand-title {
-        font-size: 1.35rem;
+        font-size: 1.5rem;
     }
 
 
@@ -376,6 +394,10 @@ h1 span {
 
     h1 {
         font-size: clamp(2.8rem, 12vw, 4rem);
+    }
+
+    h1 span {
+        white-space: normal;
     }
 
     .hero-message {
